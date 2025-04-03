@@ -1,0 +1,161 @@
+﻿Pathways
+Wikipathway
+Pathway
+	Description
+	Citation
+	Brain-derived neurotrophic factor (BDNF) signaling pathway WP2380
+	BDNF, a vital neurotrophin, governs diverse neuronal functions and processes, including growth, differentiation, synaptic plasticity, apoptosis, metabolism, and behavior, by activating multiple signaling pathways through its binding to receptors TrkB and p75NTR, implicating its critical involvement in various neurological disorders.
+	National Center for Biotechnology Information (2023). PubChem Pathway Summary for Pathway WP2380, Brain-derived neurotrophic factor (BDNF) signaling pathway, Source: WikiPathways. Retrieved October 25, 2023 from https://pubchem.ncbi.nlm.nih.gov/pathway/WikiPathways:WP2380.
+	ErbB signaling pathway WP673
+	
+
+The ErbB protein family is vital for diverse physiological processes, with dysregulation implicated in neurodegenerative diseases and solid tumors, and disruption in mice leads to embryonic lethality and organ defects, emphasizing their critical role in development and health.
+	National Center for Biotechnology Information (2023). PubChem Pathway Summary for Pathway WP673, ErbB signaling pathway, Source: WikiPathways. Retrieved October 25, 2023 from https://pubchem.ncbi.nlm.nih.gov/pathway/WikiPathways:WP673.
+	Alzheimer's disease WP2059
+
+
+
+
+	This pathway displays current genes, proteolytic events and other processes associated with the progression of Alzheimer's disease.
+	National Center for Biotechnology Information (2023). PubChem Pathway Summary for Pathway WP2059, Alzheimer's disease and miRNA effects, Source: WikiPathways. Retrieved October 25, 2023 from https://pubchem.ncbi.nlm.nih.gov/pathway/WikiPathways:WP2059.
+	Neuroinflammation WP4919
+
+
+	Neuroinflammation is inflammation specific to parts of the central nervous system. Stress on the cell leads to activation of inflammatory response pathways that involve several transcription factors such as AP-1 and NFkB, which will lead to the transcription of several proteins and/or cytokines.
+	National Center for Biotechnology Information (2023). PubChem Pathway Summary for Pathway WP4919, Neuroinflammation, Source: WikiPathways. Retrieved October 25, 2023 from https://pubchem.ncbi.nlm.nih.gov/pathway/WikiPathways:WP4919.
+	BDNF-TrkB Signaling WP3676
+
+
+
+
+	BDNF regulates synaptic activity and plays a significant role in synaptic plasticity, fundamental for learning and memory development, through the BDNF-TrkB signaling pathway. This pathway operates via three key routes: MAPK, PLC/PLCG, and PI3K, influencing protein translation and transport in response to synaptic activity. 
+	National Center for Biotechnology Information (2023). PubChem Pathway Summary for Pathway WP3676, BDNF-TrkB signaling, Source: WikiPathways. Retrieved October 25, 2023 from https://pubchem.ncbi.nlm.nih.gov/pathway/WikiPathways:WP3676.
+	
+
+Reactome
+Pathway
+	Description
+	Citation
+	Signaling By Receptor Tyrosine Kinases R-HSA-9006934
+	This pathway activtaes cell surface proteins involved in Signal Transduction, which help bind growth factors that regulate cell differentiation, proliferation, survival, metabolism, and migration.
+	Rothfels, K. (2017). Signaling by Receptor Tyrosine Kinases. Reactome, 86, https://reactome.org/content/detail/R-HSA-9006934 (Tue Oct 31 2023)
+	Neuronal System R-HSA-112316
+	This pathway contributes to communication occurs across synapses, the functional connection between neurons. Synapses can be divided into two general classes: electrical synapses and chemical synapses.
+	Gillespie, M.E. (2008). Neuronal System. Reactome, 86, https://reactome.org/content/detail/R-HSA-112316 (Tue Oct 31 2023)
+	FGFR2 Alternative Splicing R-HSA-6803529
+	Alternative splicing of the FGFR2 nascent mRNA generates an epithelial specific isoform (FGFR2 IIIb) and a mesenchymal specific isoform (FGFR2 IIIc).
+	Rothfels, K. (2016). FGFR2 alternative splicing. Reactome, 86, https://doi.org/10.3180/r-hsa-6803529.1 (Tue Oct 31 2023)
+	Signaling By FGFR2 R-HSA-565473
+	The fibroblast growth factor (FGF) family of growth factors mediate their cellular responses by binding to and activating the different isoforms encoded by the four receptor tyrosine kinases (RTKs) designated FGFR1, FGFR2, FGFR3 and FGFR4.
+	de Bono, B. (2007). Signaling by FGFR2. Reactome, 86, https://reactome.org/content/detail/R-HSA-5654738 (Tue Oct 31 2023)
+	Transmission Across Chemical Synapses R-HSA-112315
+	This pathway is in charge of chemical synapses are specialized junctions that are used for communication between neurons, neurons and muscle or gland cells. The synapse involves a presynaptic neuron and a postsynaptic neuron, muscle cell or glad cell.
+	Mahajan, S.S. (2008). Transmission across Chemical Synapses. Reactome, 86, https://reactome.org/content/detail/R-HSA-112315 (Tue Oct 31 2023)
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+GoBiological
+
+
+Pathway
+	Description
+	Citation
+	Negative Regulation Of Axonogenesis (GO:0050771)
+	Negative regulation of axonogenesis refers to processes that inhibit or restrict the growth and development of axons in neurons. Axons are the long, slender projections of nerve cells that transmit electrical signals to other neurons, muscles, or target cells. In the context of Alzheimer's disease, negative regulation of axonogenesis can be particularly relevant, as axonopathy (damage to axons) is a key feature of the disease.
+Amyloid-beta (Aβ) Plaques: Alzheimer's disease is characterized by the accumulation of amyloid-beta plaques in the brain. These plaques can disrupt axonal transport and cause axon degeneration. This can be seen as a negative regulation of axonogenesis since the axons are prevented from growing or maintaining their health.
+	
+
+	
+
+Excitatory Chemical Synaptic Transmission (GO:0098976)
+	Excitatory chemicals, particularly glutamate, play a crucial role in normal brain function, as they are the primary neurotransmitters responsible for transmitting signals between neurons. However, an excessive release of excitatory neurotransmitters, such as glutamate, can lead to a condition known as excitotoxicity. This overstimulation of neurons can cause damage and cell death, which is a significant concern in neurodegenerative diseases like Alzheimer's disease.
+	
+
+	Negative Regulation Of Protein Kinase Activity (GO:0006469)
+	Any process that stops, prevents, or reduces the frequency, rate or extent of kinase activity, the catalysis of the transfer of a phosphate group, usually from ATP, to a substrate molecule. This regulation is a fundamental aspect of cellular signaling pathways, including those implicated in Alzheimer's disease.
+In Alzheimer's disease, abnormal protein phosphorylation and kinase activity are known to be involved in the pathogenesis of the disease.
+	
+
+	Regulation Of Neuron Projection Development (GO:0010975)
+	Neuron projections are cellular processes that extend from neurons and include axons and dendrites. Neuron projection development is a critical process in the formation and functioning of the nervous system. In the context of neurological diseases and conditions, the regulation of neuron projection development is of significant interest. Disruptions in neuron projection development can lead to various neurological disorders, including neurodevelopmental disorders, neurodegenerative diseases, and even psychiatric conditions.
+	
+
+	Anterograde Trans-Synaptic Signaling (GO:0098916)
+	"Anterograde" means the transmission of signals from the presynaptic neuron (the neuron sending the signal) to the postsynaptic neuron (the neuron receiving the signal) in a forward or downstream direction. This process is essential for normal neuronal communication and plays a critical role in various functions of the nervous system, including learning, memory, and motor control. Dysfunction in anterograde trans-synaptic signaling can lead to a range of neurological and neuropsychiatric disorders.
+	
+
+	
+
+
+
+KEGG
+
+
+Pathway
+	Description
+	Genes
+	Citation
+	Cocaine addiction
+	Cocaine addiction can have significant neurobiological effects, particularly in areas of the brain associated with reward and pleasure. While this is distinct from Alzheimer's disease, it is essential to understand how substances like cocaine can influence brain function. Chronic cocaine use can trigger neuroinflammation, which is the brain's response to damage or injury. 
+	GRIN2A, JUN, BDNF, FOSB, GRIN2B, CREB5, CDK5R1
+	Bailey D. N. (2000). Cocaine and cocaethylene binding to normal human brain and Alzheimer disease brain. Therapeutic drug monitoring, 22(5), 630–634. https://doi.org/10.1097/00007691-200010000-00021
+
+
+
+
+
+
+
+	ErbB signaling pathway
+
+
+	The ErbB signaling pathway, also known as the epidermal growth factor receptor (EGFR) signaling pathway, is a complex network of proteins crucial for regulating cell growth, differentiation, and survival. This pathway plays a pivotal role in various physiological and pathological processes,Neurotrophic factors play a role in protecting neurons from degeneration, which is relevant to neurodegenerative diseases like Alzheimer's..
+	 GSK3B, MAP2K4, MAPK8, JUN, SHC3, PRKCB, GAB1, MAPK1, MTOR
+	Yu, H., Xiong, M., & Zhang, Z. (2023). The role of glycogen synthase kinase 3 beta in neurodegenerative diseases. Frontiers in molecular neuroscience, 16, 1209703. https://doi.org/10.3389/fnmol.2023.1209703
+ 
+	Amphetamine addiction
+	Amphetamine addiction is a pathway associated with addiction to amphetamine-based drugs, such as methamphetamine. It focuses on the molecular and cellular changes that occur in the brain due to amphetamine use, leading to addictive behaviors. Chronic amphetamine use can lead to cognitive impairments and memory problems. While these cognitive issues are distinct from Alzheimer's, understanding the cognitive deficits associated with amphetamine addiction could inform our understanding of the cognitive decline in Alzheimer's.
+	GRIN2A, JUN, PPP3R2, PRKCB, FOSB, GRIN2B, CREB5
+
+
+
+
+	Reynolds, L. M., Hernandez, G., MacGowan, D., Popescu, C., Nouel, D., Cuesta, S., Burke, S., Savell, K. E., Zhao, J., Restrepo-Lozano, J. M., Giroux, M., Israel, S., Orsini, T., He, S., Wodzinski, M., Avramescu, R. G., Pokinko, M., Epelbaum, J. G., Niu, Z., Pantoja-Urbán, A. H., … Flores, C. (2023). Amphetamine disrupts dopamine axon growth in adolescence by a sex-specific mechanism in mice. Nature communications, 14(1), 4035. https://doi.org/10.1038/s41467-023-39665-1
+
+
+
+
+	Bacterial invasion of epithelial cells
+	Bacterial invasion of epithelial cells is a pathway that elucidates how certain pathogenic bacteria can invade and establish infections within the epithelial cells of the host. Bacterial infections trigger immune responses, including the activation of microglia, the brain's resident immune cells. Dysregulated immune responses and the chronic activation of microglia have been implicated in Alzheimer's pathology.
+	ITGB1, DNM3, SHC3, CAV1, GAB1, ACTR3B, DNM1
+
+
+
+
+	Zhang, W., Wu, Q., Lu, Y. L., Gong, Q. H., Zhang, F., & Shi, J. S. (2017). Protective effects of Dendrobium nobile Lindl. alkaloids on amyloid beta (25-35)-induced neuronal injury. Neural regeneration research, 12(7), 1131–1136. https://doi.org/10.4103/1673-5374.211193
+
+
+Morley, J. E., Morris, J. C., Berg-Weger, M., Borson, S., Carpenter, B. D., Del Campo, N., Dubois, B., Fargo, K., Fitten, L. J., Flaherty, J. H., Ganguli, M., Grossberg, G. T., Malmstrom, T. K., Petersen, R. D., Rodriguez, C., Saykin, A. J., Scheltens, P., Tangalos, E. G., Verghese, J., Wilcock, G., … Vellas, B. (2015). Brain health: the importance of recognizing cognitive impairment: an IAGG consensus conference. Journal of the American Medical Directors Association, 16(9), 731–739. https://doi.org/10.1016/j.jamda.2015.06.017
+
+
+
+
+
+
+	Spinocerebellar ataxia
+
+
+	Spinocerebellar ataxia is a group of inherited neurodegenerative disorders that affect the cerebellum, a region of the brain responsible for coordinating movement and balance. This pathway encompasses the genetic and molecular mechanisms underlying the development and progression of spinocerebellar ataxias.
+	PSMD8, GRIN2A, MAPK8, PSMB2, PRKCB, RORA, ATXN10, GRIN2B, SLC25A4, MTOR
+	Stephenson, J., Nutma, E., van der Valk, P., & Amor, S. (2018). Inflammation in CNS neurodegenerative diseases. Immunology, 154(2), 204–219. https://doi.org/10.1111/imm.12922
