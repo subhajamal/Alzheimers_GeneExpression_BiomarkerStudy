@@ -1,0 +1,132 @@
+---
+title: "Midterm_Project__GroupComp_SSJ57"
+author: "SubhaJamal"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Step 1 - Read in data
+
+```{r}
+clinData <- read.csv("C:/Users/Windows/Downloads/Midterm Project SSJ57/code/input/Blalock_clin_final.csv")
+knitr::kable(head(clinData[,1:4], n = 5))
+
+```
+
+```{r}
+geneExp <- read.table(file = "C:/Users/Windows/Downloads/Midterm Project SSJ57/code/input/GSE62232_Blalock_geneexp_final.tsv",
+                      sep = "\t",
+                      header = TRUE,
+                      stringsAsFactors = FALSE,
+                      row.names = 1)
+
+```
+
+## Step 2 - Clean/Filter data
+```{r}
+library(dplyr)
+clinical<-filter(clinData,clinData$DISEASE_STATUS %in% c('Moderate','Control'))
+```
+
+## Step 3 - Identify the groups to be compared
+```{r}
+# Labels (row numbers) that can identify the baseline group patients
+baselineGrpLabels <-  which(clinical$DISEASE_STATUS == "Control") 
+head(baselineGrpLabels)
+# Use the labels (row numbers) to subset baseline patients in clinical data file 
+clinBase <- clinical[baselineGrpLabels, ]
+
+# Labels (row numbers) that can identify the comp group patients
+compGrpLabels <- which(clinical$DISEASE_STATUS == "Moderate")
+head(compGrpLabels)
+# Use the labels (row numbers) to subset comp patients in clinical data file 
+clinComp <- clinical[compGrpLabels, ]
+
+#### Use the clinBase and clinComp objects to subset gene expression data
+geneExpBase <- geneExp[, clinBase$BIOSPECIMEN_ID]
+geneExpComp <- geneExp[, clinComp$BIOSPECIMEN_ID]
+```
+## Step 4- Sanity check
+```{r}
+#See if sample ids in clinical data match sample ids in gene exp data
+clinBase$BIOSPECIMEN_ID == colnames(geneExpBase)
+clinComp$BIOSPECIMEN_ID == colnames(geneExpComp)
+```
+```{r}
+  
+# Export the features from gene expression data
+write.table(rownames(geneExp),
+            file = "C:/Users/Windows/Downloads/Midterm Project SSJ57/code/output/geneexp_FeatureID.tsv",
+            sep = "\t",
+            quote = FALSE)
+
+```
+
+## Step 5 - Prep data for T-test
+```{r}
+source("C:/Users/Windows/Downloads/Midterm Project SSJ57/code/fnTTest.R")
+
+
+### Checking to make sure data is a numeric data frame
+knitr::kable(head(geneExpBase[1:5,1:4]))
+knitr::kable(head(geneExpComp[1:5,1:4]))
+```
+
+## Step 6 - Call function for T-test
+```{r}
+results1 = fnTTest(baseGroup = geneExpBase, 
+                   compGroup = geneExpComp, 
+                   testName = "20231016_TTest_", 
+                   baseGroupName = "Control",
+                   compGroupName =  "Moderate",
+                   folderName = "C:/Users/Windows/Downloads/Midterm Project SSJ57/code/output")
+
+```
+
+# Next Step - Sub-set top differentially expressed genes
+```{r}
+#Read in the T-Test results file
+ttestResults <- read.csv(file = "C:/Users/Windows/Downloads/Midterm Project SSJ57/code/output/20231016_TTest__Moderate_(Comp).vs._Control_(Base).TTest.csv")
+
+
+#check to make sure p-value column is imported as numeric 
+#sort by p-value (just in case the results are not sorted by p-value)
+ttestResultsSorted <- dplyr::arrange(ttestResults, Pvalue)
+
+#find rows with p-value < 0.05
+whichSig <- which(ttestResultsSorted$Pvalue <= 0.05) 
+
+#Short list sig results
+ttestResultsSig <- ttestResultsSorted[whichSig, ]
+
+### Export short listed results
+file_path <- "C:/Users/Windows/Downloads/Midterm Project SSJ57/code/output/20231016_disStatus_Ttest_Shortlisted.tsv"
+write.table(x = ttestResultsSig, file = file_path, quote = FALSE, sep = "\t", row.names = FALSE)
+
+
+##### First column is a list of features in thsi format : ProbeID|GeneName. 
+#### Use string split strsplit() function to extract gene names
+funcSplit <- function(featureX) {
+  f1 <- unlist(strsplit(x = featureX, split = "|", fixed = TRUE))
+  f2 <- f1[2]
+  return(f2)
+}
+
+# Use apply() function to run the split on every row, its faster version of a loop
+geneNames1 <- apply(X = as.matrix(ttestResultsSig$Feature), 
+                    MARGIN = 1, FUN = funcSplit)
+
+head(geneNames1)
+
+#print length of short listed gene names
+length(geneNames1)
+
+### Export list of gene names
+file_path <- "C:/Users/Windows/Downloads/Midterm Project SSJ57/code/output/20231016_SigDiffExpressedGenes.tsv"
+write.table(x = geneNames1, file = file_path, quote = FALSE, sep = "\t")
+
+```

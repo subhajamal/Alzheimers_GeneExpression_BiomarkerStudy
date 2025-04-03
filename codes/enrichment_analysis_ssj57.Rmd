@@ -1,0 +1,102 @@
+---
+title: "MidtermProject_EnrichmentAnalysis_ssj57"
+author: "SubhaJamal"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(enrichR)
+library(openxlsx)
+```
+
+## Import T-test results so that we can short list further
+```{r}
+#folder that contains group comparison results
+fileName <- "C:/Users/Windows/Downloads/Midterm Project SSJ57/code/output/20231016_TTest__Moderate_(Comp).vs._Control_(Base).TTest.csv"
+
+# read in group comparison results
+result1 <- read.csv(file = fileName, 
+                        header = T, stringsAsFactors = F, row.names = 1)
+```
+
+#Filtering/shortlisting
+Short list results based in p-value cut off (pvalue <= 0.01)
+```{r}
+pValueCutOff <- 0.01
+which1 <- ((as.numeric(result1$Pvalue) <= pValueCutOff))
+table(which1)  
+
+resultShort <- result1[which1, ]
+```
+
+## Export the short listed results for reference(output folder)
+```{r}
+#length of short listed results
+nrow(resultShort)
+
+write.csv(x = resultShort, file = "C:/Users/Windows/Downloads/Midterm Project SSJ57/code/output/TTestResultShortlist.csv")
+
+```
+
+## Clean gene names
+Note - the gene names are in the form of "reporterid_genename". So need to split this.
+```{r}
+funcSplit <- function(rep_gene) {
+    rep_gene_split <- unlist(strsplit(x = rep_gene, 
+                                      split = "|", 
+                                      fixed = TRUE))
+    gene <- rep_gene_split[2]
+    return(gene)
+}
+geneListSplit <- apply(X = as.matrix(row.names(resultShort)), 
+                       MARGIN = 1, FUN = funcSplit )
+head(geneListSplit) #cleaned gene names
+
+#remove duplicates
+geneListSplit1 <- unique(geneListSplit)
+
+# remove NA value
+geneListFinal <- na.omit(geneListSplit1) 
+
+#print number of unique genes
+length(geneListFinal)
+write.table(x = geneListFinal, 
+            file = "C:/Users/Windows/Downloads/Midterm Project SSJ57/code/output/shortListedUniqueGenes.tsv",
+            quote = FALSE, sep = "\t", row.names = FALSE, col.names = FALSE)
+
+```
+
+## Load Databases for Enrichr R package , and check connection
+```{r}
+#checking if EnrichR website and packing are working
+dbs <- enrichR::listEnrichrDbs()  #total number of databases available = 200+ 
+
+#testing if EnrichR package is working
+testOutput <- enrichR::enrichr(genes = c("Runx1", "Gfi1", "Gfi1b", "Spi1", "Gata1", "Kdr"), databases = "KEGG_2021_Human")
+head(testOutput[[1]])
+
+#List of databases for which enrichment analysis will be run
+dblist1 <- read.csv(file = "C:/Users/Windows/Downloads/Midterm Project SSJ57/code/input/2023-EnrichR-Databases.txt", 
+                    header = FALSE, stringsAsFactors = FALSE)
+
+
+head(dblist1)
+```
+
+```{r}
+# Set output file name
+outputFileName1 <- paste("C:/Users/Windows/Downloads/Midterm Project SSJ57/code/output/ssj57_EnrichR.xlsx", sep = "")
+
+# Load R script into the environment
+source(file = "C:/Users/Windows/Downloads/Midterm Project SSJ57/code/functionEnrichment.R") 
+
+# Call function to run Enrichment
+functionEnrichment(dblist1, geneListFinal, outputFileName1)
+
+#NEED INTERNET CONNECTION
+```
