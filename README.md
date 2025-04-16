@@ -1,7 +1,7 @@
 # Alzheimers_GeneExpression_BiomarkerStudy
 
 
-This repository contains Subha Jamal’s project, focusing on the analysis of gene expression data in Alzheimer’s disease (AD). The goal of the project was to identify differentially expressed genes (DEGs), perform enrichment analysis, and explore potential biomarkers or drug targets.
+focusing on the analysis of gene expression data in Alzheimer’s disease (AD). The goal of the project was to identify differentially expressed genes (DEGs), perform enrichment analysis, and explore potential biomarkers or drug targets.
 
 ---
 
@@ -77,12 +77,6 @@ Midterm_GeneExpression_Analysis/ ├── results/ │ ├── Subha_Moderate
 
 This analysis contributes to the ongoing research on Alzheimer’s disease by identifying key gene expression signatures and pathways associated with disease progression. The workflow captures core steps in transcriptomics analysis and reflects real-world biomedical research practices.
 
----
 
-## 📍 Author
-
-**Subha Jamal**  
-M.S. in Health Informatics & Data Science  
-Georgetown University  
 
 
